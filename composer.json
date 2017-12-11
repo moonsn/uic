@@ -1,0 +1,32 @@
+{
+    "name": "moonsn1994/uic",
+    "description": "a Uic Client.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "moonsn",
+            "email": "moonsn1994@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "MOONSN1994\\Uic\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "moonsn1994/uic": "dev-master"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MOONSN1994\\Uic\\UicServiceProvider"
+            ],
+            "aliases": {
+                "Uic": "MOONSN1994\\Uic\\Facade"
+            }
+        }
+    }
+}
