@@ -1,6 +1,9 @@
-## UIC For BAIDU
+## UIC Client For Laravel
+
+## Config
+
+### usage()
+
+Uic::getUserByUsername('username');
 
 
-### usage
-
-Uic::getUserByUsername('yueliangxiang');
