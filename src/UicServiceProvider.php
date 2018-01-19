@@ -15,7 +15,7 @@ class UicServiceProvider extends ServiceProvider
     {
         $this->publishes([
             dirname(__DIR__).'/publishable/uic.php' => config_path('uic.php'),
-        ]);
+        ], 'uic_config_file');
     }
 
     /**
