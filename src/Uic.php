@@ -32,9 +32,14 @@ class Uic {
      * @return mixed
      */
     public function getUserByUsername($username) {
-        return $this->UicSoapClient()->getUserByUsername(array(
+        $ret = $this->UicSoapClient()->getUserByUsername(array(
             'arg0'=>$username,
-        ))->return;
+        ));
+        if (empty((array)$ret)) {
+            return null;
+            throw new \Exception("通过uuap获取用户信息 {$username} 失败!");
+        }
+        return $ret->return;
     }
 
     public function getAllUsersBySuperiorUsername($superiorUsername, $deep) {
